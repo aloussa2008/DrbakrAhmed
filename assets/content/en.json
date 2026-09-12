@@ -49,7 +49,7 @@
     },
     "followup": {
       "title": "The Assistants System",
-      "text": "3 specialized assistants, each with a clear role, so every student gets real follow-up, not a generic one.",
+      "text": " specialized assistants, each with a clear role, so every student gets real follow-up, not a generic one.",
       "assistants": [
         { "title": "Student & parent follow-up", "text": "Tracking attendance, grades, Homework, subscription matters, and ongoing reports to the parent." },
         { "title": "Correction & level tracking", "text": "Correcting Class Work and Homework, tracking mistakes, monitoring level, and setting revision plans." }
