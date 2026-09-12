@@ -273,7 +273,36 @@
     border-color:rgba(255,247,236,.4);
     color:var(--cream);
   }
+/* =========================================================
+     CAROUSEL SLIDERS (Method & Pillars)
+  ========================================================= */
+  .slider-cards-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 4px 20px 4px;
+    scrollbar-width: none;
+    margin-top: 50px;
+  }
+  .slider-cards-container::-webkit-scrollbar { display: none; }
+  
+  .slider-cards-container .method-card,
+  .slider-cards-container .pillar {
+    flex: 0 0 calc(33.333% - 14px);
+    min-width: 310px;
+    scroll-snap-align: start;
+  }
 
+  @media(max-width: 900px) {
+    .slider-cards-container .method-card,
+    .slider-cards-container .pillar {
+      flex: 0 0 85%;
+      min-width: 280px;
+    }
+  }
+  
   /* =========================================================
      ABOUT
   ========================================================= */
