@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "about": "About Dr. Bakr",
+    "courses": "Courses",
+    "scores": "Scores",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "book": "Book Your Spot"
+  },
+  "hero": {
+    "title_html": "Stop worrying about math.<br><span class=\"line2\">You will get it.</span>",
+    "sub": "I'm Dr. Bakr Ahmed, a civil engineer and math teaching specialist. I help my students understand the idea instead of memorizing steps, build real confidence, and reach the highest Score possible from their very first Trial.",
+    "cta": "Book Your Spot Now"
+  },
+  "about": {
+    "heading_html": "Civil engineer, and math teaching specialist for years.",
+    "statLabel": "Students taught",
+    "lede": "Over the years, I've helped hundreds of students break through their fear of math and turn from students struggling with the subject into students who walk into the exam with confidence. It's not just teaching — I follow up with every student until they reach their goal.",
+    "points": [
+      "<strong>Real teaching experience</strong>Not theory — actual experience with hundreds of different cases.",
+      "<strong>Step-by-step explanation</strong>Every idea builds on the one before it, no gaps in understanding.",
+      "<strong>Continuous follow-up and error correction</strong>A full team tracks every student's level, step by step.",
+      "<strong>Goal-driven preparation</strong>Every step of the course is built around getting you the highest Score you can reach."
+    ]
+  },
+  "method": {
+    "heading_html": "Not just explaining.<br>A complete system built to get <b>you there</b>.",
+    "cards": [
+      {
+        "title": "Understand the math",
+        "items": ["American math curriculum explained Topic by Topic", "Class Work during the session", "Homework after every session", "Regular comprehensive exams", "Practice on real exams"]
+      },
+      {
+        "title": "You won't study alone",
+        "items": ["Specialized assistants for follow-up", "Homework correction", "Class Work correction", "Tracking and logging mistakes", "Level tracking and revision plans", "Ongoing communication with the parent"]
+      },
+      {
+        "title": "Get ready to perform",
+        "items": ["Preparation for Trial exams", "Time management strategy", "Identifying weak points", "Continuous improvement up to the exam"]
+      }
+    ]
+  },
+  "basic": {
+    "heading_html": "The foundation isn't just <b>explaining</b>.",
+    "master": {
+      "title": "The Teaching Part",
+      "text": "The American math curriculum explained in an organized way — every Topic has Class Work in the session and Homework after it, to make sure it's understood before moving on. Recordings are available for the whole course.",
+      "items": ["American math curriculum explained Topic by Topic", "Class Work during the session", "Homework to make sure it's understood", "Regular comprehensive exams", "Free Advanced group solving exams throughout the foundation period"]
+    },
+    "followup": {
+      "title": "The Assistants System",
+      "text": "3 specialized assistants, each with a clear role, so every student gets real follow-up, not a generic one.",
+      "assistants": [
+        { "title": "Student & parent follow-up", "text": "Tracking attendance, grades, Homework, subscription matters, and ongoing reports to the parent." },
+        { "title": "Correction & level tracking", "text": "Correcting Class Work and Homework, tracking mistakes, monitoring level, and setting revision plans." }
+      ]
+    },
+    "ctaSat": "Book SAT Basics",
+    "ctaEst": "Book EST Basics"
+  },
+  "revision": {
+    "heading_html": "Before the Trial, everything needs to be <b>ready</b>.",
+    "lede": "Intensive revision before every Trial, with recordings available for the whole course.",
+    "pillars": [
+      "The hardest and most important ideas from past exams, organized by Topic.",
+      "Complete Real exams with full explanations, and training on real time management.",
+      "A complete review of math fundamentals through the course Recordings, full Sheets, and self-correction."
+    ],
+    "note_html": "<strong>Separate follow-up:</strong> a dedicated assistant for boys and one for girls, correcting revision sheets and real exams, and identifying weak points before the actual Trial."
+  },
+  "courses": {
+    "heading_html": "Choose the exam.<br>We'll take care of the rest.",
+    "sat": {
+      "desc": "Complete preparation for the SAT Math test. Recordings available for the whole course.",
+      "items": ["Full explanation of every Concept", "Solving College Board exams", "Time management training", "Dedicated follow-up group for questions", "Mock trial exams", "Ongoing follow-up"],
+      "cta": "Book SAT Course"
+    },
+    "est": {
+      "desc": "Complete foundation and preparation for the EST test. Recordings available for the whole course.",
+      "items": ["Strong foundation for EST questions", "Solving past and available exams", "Intensive training on hard ideas", "Ongoing follow-up with the parent", "Exams simulating the EST system"],
+      "cta": "Book EST Course"
+    }
+  },
+  "scores": {
+    "lede": "Real students. Real progress. Real results."
+  },
+  "reviews": {
+    "heading_html": "It's not just that they understand math.<br>They <b>believe</b> in themselves."
+  },
+  "finalCta": {
+    "heading_html": "Ready to master<br>math?",
+    "text": "Start your prep with a system built on understanding, practice, correction, and ongoing follow-up.",
+    "cta": "Book Your Spot Now"
+  },
+  "footer": {
+    "tagline": "Professional preparation for SAT, EST and ACT Math, built on real understanding and follow-up."
+  },
+  "whatsapp": {
+    "sat": "Hi Dr. Bakr, I'd like details on subscribing to the SAT course",
+    "est": "Hi Dr. Bakr, I'd like details on subscribing to the EST course",
+    "satBasics": "Hi Dr. Bakr, I'd like details on subscribing to the SAT Basics course",
+    "estBasics": "Hi Dr. Bakr, I'd like details on subscribing to the EST Basics course",
+    "general": "Hi Dr. Bakr, I'd like details on the courses"
+  }
+}
