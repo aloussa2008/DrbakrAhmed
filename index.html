@@ -124,7 +124,40 @@
   @media(prefers-reduced-motion: reduce){
     .reveal{ opacity:1; transform:none; filter:none; transition:none; }
   }
+/* CSS Styling */
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end; /* Right-aligned as shown in the screenshot */
+  padding: 20px;
+  background-color: #FDFBF7; /* Page background matching your design */
+}
 
+.tag-btn {
+  background-color: transparent;
+  color: #4A4643;               /* Dark text color for the tags */
+  border: 1px solid #D6CEC4;    /* Subtle rounded border outline */
+  border-radius: 50px;          /* Pill / pill-shaped rounded corners */
+  padding: 10px 24px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Optional hover & active effects */
+.tag-btn:hover {
+  border-color: #E91E63;
+  color: #E91E63;
+}
+
+.tag-btn.active {
+  background-color: #E91E63;
+  color: #FFFFFF;
+  border-color: #E91E63;
+}
   /* =========================================================
      NAVBAR
   ========================================================= */
@@ -576,13 +609,14 @@
   <div class="cta-row hero-in">
     <a href="#" class="btn btn-pink" data-wa="general" data-i18n="hero.cta">احجز مكانك الآن</a>
   </div>
-  <div class="hero-strip hero-in">
-    <span class="subject-chip en">SAT MATH</span>
-    <span class="subject-chip en">EST MATH</span>
-    <span class="subject-chip en">ACT 2 MATH</span>
-    <span class="subject-chip en">EST 2 MATH</span>
-    <span class="subject-chip en">BASICS COURSE</span>
-  </div>
+<!-- HTML Structure -->
+<div class="tag-container">
+  <button class="tag-btn">BASICS COURSE</button>
+  <button class="tag-btn">EST 2 MATH</button>
+  <button class="tag-btn">ACT 2 MATH</button>
+  <button class="tag-btn">EST MATH</button>
+  <button class="tag-btn">SAT MATH</button>
+</div>
 </section>
 
 <!-- =========================================================
