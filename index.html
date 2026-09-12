@@ -273,36 +273,7 @@
     border-color:rgba(255,247,236,.4);
     color:var(--cream);
   }
-/* =========================================================
-     CAROUSEL SLIDERS (Method & Pillars)
-  ========================================================= */
-  .slider-cards-container {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 20px 4px 20px 4px;
-    scrollbar-width: none;
-    margin-top: 50px;
-  }
-  .slider-cards-container::-webkit-scrollbar { display: none; }
-  
-  .slider-cards-container .method-card,
-  .slider-cards-container .pillar {
-    flex: 0 0 calc(33.333% - 14px);
-    min-width: 310px;
-    scroll-snap-align: start;
-  }
 
-  @media(max-width: 900px) {
-    .slider-cards-container .method-card,
-    .slider-cards-container .pillar {
-      flex: 0 0 85%;
-      min-width: 280px;
-    }
-  }
-  
   /* =========================================================
      ABOUT
   ========================================================= */
@@ -605,14 +576,14 @@
   <div class="cta-row hero-in">
     <a href="#" class="btn btn-pink" data-wa="general" data-i18n="hero.cta">احجز مكانك الآن</a>
   </div>
-<div class="hero-strip hero-in">
-  <a href="#courses" class="subject-chip en">SAT MATH</a>
-  <a href="#courses" class="subject-chip en">EST MATH</a>
-  <a href="#courses" class="subject-chip en">ACT 2 MATH</a>
-  <a href="#courses" class="subject-chip en">EST 2 MATH</a>
-  <a href="#basic" class="subject-chip en">BASICS COURSE</a>
-  <a href="#revision" class="subject-chip en">REVISION CAMP</a>
-</div>
+  <div class="hero-strip hero-in">
+    <span class="subject-chip en">SAT MATH</span>
+    <span class="subject-chip en">EST MATH</span>
+    <span class="subject-chip en">ACT 2 MATH</span>
+    <span class="subject-chip en">EST 2 MATH</span>
+    <span class="subject-chip en">BASICS COURSE</span>
+  </div>
+</section>
 
 <!-- =========================================================
      ABOUT
@@ -670,8 +641,7 @@
   <div class="container">
     <div class="eyebrow en">THE DR. BAKR METHOD</div>
     <h2 class="section-title" data-i18n-html="method.heading_html">مش بس شرح.<br>نظام متكامل هدفه <b>وصولك</b>.</h2>
-    
-    <div class="slider-cards-container">
+    <div class="method-grid">
       <div class="method-card reveal">
         <div>
           <div class="tag en">MASTER</div>
@@ -685,7 +655,6 @@
           <li data-i18n="method.cards.0.items.4">تدريب على امتحانات حقيقية</li>
         </ul>
       </div>
-
       <div class="method-card reveal">
         <div>
           <div class="tag en">FOLLOW-UP</div>
@@ -700,7 +669,6 @@
           <li data-i18n="method.cards.1.items.5">تواصل مستمر مع ولي الأمر</li>
         </ul>
       </div>
-
       <div class="method-card reveal">
         <div>
           <div class="tag en">RESULTS</div>
@@ -777,23 +745,23 @@
 ========================================================= -->
 <section id="revision">
   <div class="container">
-    <div class="eyebrow en">REVISION CAMP FOR EACH TRIAL</div>
+    <div class="eyebrow en">REVISION COURSE FOR EACH TRIAL</div>
     <h2 class="section-title" data-i18n-html="revision.heading_html">قبل الـ Trial، كل حاجة لازم تكون <b>جاهزة</b>.</h2>
-    <p class="lede" data-i18n="revision.lede">معسكر مراجعة مكثف قبل كل Trial، وريكوردات متاحة طول فترة الكورس.</p>
+    <p class="lede" data-i18n="revision.lede">مراجعة مكثفة قبل كل Trial، وريكوردات متاحة طول فترة الكورس.</p>
 
-    <div class="slider-cards-container">
+    <div class="pillars">
       <div class="pillar reveal">
-        <div class="num en">01</div>
+        <div class="num">01</div>
         <h4>Hard Ideas</h4>
         <p data-i18n="revision.pillars.0">أصعب وأهم الأفكار من الامتحانات السابقة، منظمة حسب كل Topic.</p>
       </div>
       <div class="pillar reveal">
-        <div class="num en">02</div>
+        <div class="num">02</div>
         <h4>Real Exams</h4>
         <p data-i18n="revision.pillars.1">امتحانات Real كاملة مع شرحها، وتدريب على إدارة الوقت الحقيقي.</p>
       </div>
       <div class="pillar reveal">
-        <div class="num en">03</div>
+        <div class="num">03</div>
         <h4>Complete Review</h4>
         <p data-i18n="revision.pillars.2">مراجعة أساسيات الماث بالكامل من خلال Recordings الكورس، Sheets كاملة، وتصحيح ذاتي.</p>
       </div>
@@ -1405,7 +1373,6 @@
     "general": "Hi Dr. Bakr, I'd like details on the courses"
   }
 }
-
 </script>
 </body>
-</html>
+</html> 
