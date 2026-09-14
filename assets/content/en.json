@@ -3,6 +3,8 @@
     "method": "The Method",
     "results": "Results",
     "basics": "Basics",
+    "sat": "SAT",
+    "est": "EST",
     "camp": "Programs",
     "level2": "ACT 2 • EST 2",
     "programsShort": "Programs",
@@ -25,36 +27,9 @@
     "toggle": "See how it works",
     "toggleOpen": "Close details",
     "cards": [
-      {
-        "title": "Understand the math",
-        "items": [
-          "American math curriculum explained Topic by Topic",
-          "Class Work during the session",
-          "Homework after every session",
-          "Regular comprehensive exams",
-          "Practice on real exams"
-        ]
-      },
-      {
-        "title": "You won't study alone",
-        "items": [
-          "Specialized assistants for follow-up",
-          "Homework correction",
-          "Class Work correction",
-          "Tracking and logging mistakes",
-          "Level tracking and revision plans",
-          "Ongoing communication with the parent"
-        ]
-      },
-      {
-        "title": "Get ready to perform",
-        "items": [
-          "Preparation for Trial exams",
-          "Time management strategy",
-          "Identifying weak points",
-          "Continuous improvement up to the exam"
-        ]
-      }
+      { "title": "Understand the math", "items": ["American math curriculum explained Topic by Topic", "Class Work during the session", "Homework after every session", "Regular comprehensive exams", "Practice on real exams"] },
+      { "title": "You won't study alone", "items": ["Specialized assistants for follow-up", "Homework correction", "Class Work correction", "Tracking and logging mistakes", "Level tracking and revision plans", "Ongoing communication with the parent"] },
+      { "title": "Get ready to perform", "items": ["Preparation for Trial exams", "Time management strategy", "Identifying weak points", "Continuous improvement up to the exam"] }
     ],
     "recordsNote": "Recordings available for the whole course"
   },
@@ -97,14 +72,8 @@
       "title": "The Assistants System",
       "text": "Specialized assistants, each with a clear role, so every student gets real follow-up, not a generic one.",
       "assistants": [
-        {
-          "title": "Student & parent follow-up",
-          "text": "Tracking attendance, grades, Homework, subscription matters, and ongoing reports to the parent."
-        },
-        {
-          "title": "Correction & level tracking",
-          "text": "Correcting Class Work and Homework, tracking mistakes, monitoring level, and setting revision plans."
-        }
+        { "title": "Student & parent follow-up", "text": "Tracking attendance, grades, Homework, subscription matters, and ongoing reports to the parent." },
+        { "title": "Correction & level tracking", "text": "Correcting Class Work and Homework, tracking mistakes, monitoring level, and setting revision plans." }
       ]
     }
   },
@@ -114,31 +83,19 @@
     "sat": {
       "title": "SAT Math",
       "text": "Full preparation from understanding the curriculum to Real exams with professional time management.",
-      "items": [
-        "Full SAT Math curriculum, Topic by Topic",
-        "Class Work + Homework after every session",
-        "Regular Trial and Real exams"
-      ],
+      "items": ["Full SAT Math curriculum, Topic by Topic", "Class Work + Homework after every session", "Regular Trial and Real exams"],
       "cta": "Book SAT"
     },
     "est": {
       "title": "EST Math",
       "text": "Same strength, same system — built specifically for EST Math to get you your highest Score.",
-      "items": [
-        "Full EST Math curriculum, Topic by Topic",
-        "Class Work + Homework after every session",
-        "Regular Trial and Real exams"
-      ],
+      "items": ["Full EST Math curriculum, Topic by Topic", "Class Work + Homework after every session", "Regular Trial and Real exams"],
       "cta": "Book EST"
     },
     "revision": {
       "title": "Revision Camp",
       "text": "Intensive revision before every Trial. Everything ready before the actual exam.",
-      "items": [
-        "Hardest ideas from past exams",
-        "Full Real exams with explanations",
-        "Full Sheets and self-correction"
-      ],
+      "items": ["Hardest ideas from past exams", "Full Real exams with explanations", "Full Sheets and self-correction"],
       "cta": "Book Camp"
     },
     "insideHeading_html": "What's <b>inside</b> the Revision Camp?",
@@ -155,21 +112,13 @@
     "act2": {
       "title": "ACT 2 Math",
       "text": "Deeper ideas and intensive practice on real exam questions.",
-      "items": [
-        "Advanced ACT 2 curriculum",
-        "Advanced problem-solving & compound ideas",
-        "Real exams with real timing"
-      ],
+      "items": ["Advanced ACT 2 curriculum", "Advanced problem-solving & compound ideas", "Real exams with real timing"],
       "cta": "Book ACT 2"
     },
     "est2": {
       "title": "EST 2 Math",
       "text": "Focused explanation and training at the highest level of ideas.",
-      "items": [
-        "Advanced EST 2 curriculum",
-        "Advanced problem-solving & compound ideas",
-        "Real exams with real timing"
-      ],
+      "items": ["Advanced EST 2 curriculum", "Advanced problem-solving & compound ideas", "Real exams with real timing"],
       "cta": "Book EST 2"
     }
   },
