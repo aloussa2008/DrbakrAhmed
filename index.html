@@ -182,9 +182,9 @@
     max-width:1200px; margin:0 auto; padding:0 28px;
     height:72px;
     display:flex; align-items:center; justify-content:space-between;
-    gap:24px;
+    gap:20px;
   }
-  .brand{ display:flex; align-items:center; }
+  .brand{ display:flex; align-items:center; flex-shrink:0; }
   .brand-mark{
     font-family:var(--font-en);
     font-weight:800; font-size:18px; letter-spacing:.005em;
@@ -195,7 +195,7 @@
     font-size:8.5px; font-weight:700; letter-spacing:.18em;
     color:var(--pink); margin-top:5px;
   }
-  .nav-links{ display:flex; align-items:center; gap:30px; font-size:14px; font-weight:500; }
+  .nav-links{ display:flex; align-items:center; gap:28px; font-size:14px; font-weight:500; }
   .nav-links a{ position:relative; padding:6px 0; white-space:nowrap; color:var(--ink-70); transition:color .25s; }
   .nav-links a:hover{ color:var(--black); }
   .nav-links a::after{
@@ -205,7 +205,7 @@
   }
   html[dir="rtl"] .nav-links a::after{ --origin:right; }
   .nav-links a:hover::after{ transform:scaleX(1); }
-  .nav-cta{ display:flex; align-items:center; gap:12px; }
+  .nav-cta{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
   .nav-cta .btn{ padding:11px 22px; font-size:13.5px; }
   .lang-toggle{
     width:40px; height:40px; border-radius:999px;
@@ -215,50 +215,58 @@
     transition:background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
   }
   .lang-toggle:hover{ background:var(--black); border-color:var(--black); color:var(--cream); }
-  .mobile-lang{
-    margin-top:20px; width:auto; align-self:flex-start;
-    border-radius:999px; padding:12px 22px; height:auto;
-  }
 
-  .hamburger{ display:none; width:34px; height:34px; position:relative; }
-  .hamburger span{
-    position:absolute; inset-inline:5px; height:1.6px; background:var(--black);
-    transition:transform .3s var(--ease), opacity .3s;
-    border-radius:2px;
-  }
-  .hamburger span:nth-child(1){ top:11px; }
-  .hamburger span:nth-child(2){ top:17px; }
-  .hamburger span:nth-child(3){ top:23px; }
-  .hamburger.open span:nth-child(1){ transform:translateY(6px) rotate(45deg); }
-  .hamburger.open span:nth-child(2){ opacity:0; }
-  .hamburger.open span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
-
-  .mobile-panel{
-    position:fixed; top:72px; inset-inline:0; bottom:0; z-index:1001;
-    background:var(--cream);
-    transform:translateX(100%);
-    visibility:hidden;
-    transition:transform .4s var(--ease), visibility 0s linear .4s;
-    padding:44px 28px; display:flex; flex-direction:column; gap:2px;
-    overflow-y:auto;
-  }
-  html[dir="ltr"] .mobile-panel{ transform:translateX(100%); }
-  html[dir="rtl"] .mobile-panel{ transform:translateX(-100%); }
-  .mobile-panel.open{ transform:translateX(0); visibility:visible; transition:transform .4s var(--ease), visibility 0s linear 0s; }
-  .mobile-panel a{
-    font-size:26px; font-weight:800; padding:16px 0;
-    border-bottom:1px solid var(--line);
-    letter-spacing:-.01em;
-  }
-  .mobile-panel .btn{ margin-top:28px; width:100%; }
-  body.menu-open{ overflow:hidden; }
-
+  /* Tablet */
   @media(max-width:1040px){
-    .nav-links{ display:none; }
-    .hamburger{ display:block; }
+    .nav-links{ gap:18px; font-size:13.5px; }
+    .nav-cta .btn-outline{ display:none; }
   }
-  @media(max-width:900px){ .nav-cta .btn-outline{ display:none; } }
-  @media(max-width:560px){ .nav-cta .btn-pink{ display:none; } }
+
+  /* Small tablet */
+  @media(max-width:860px){
+    .nav-row{ height:64px; padding:0 20px; gap:14px; }
+    .nav-links{ gap:14px; font-size:12.5px; }
+    .nav-links a{ padding:4px 0; }
+    .nav-cta .btn{ padding:10px 18px; font-size:12.5px; }
+    .lang-toggle{ width:36px; height:36px; font-size:11px; }
+    .brand-mark{ font-size:16px; }
+    .brand-mark span{ font-size:8px; letter-spacing:.14em; }
+  }
+
+  /* Mobile — nav-links تتحوّل لسطر ثاني */
+  @media(max-width:640px){
+    .nav-row{
+      height:auto;
+      flex-wrap:wrap;
+      padding:12px 18px 10px;
+      gap:10px;
+      row-gap:10px;
+      justify-content:space-between;
+    }
+    .brand{ order:1; }
+    .nav-cta{ order:2; gap:8px; }
+    .nav-links{
+      order:3;
+      width:100%;
+      justify-content:flex-start;
+      gap:16px;
+      font-size:12.5px;
+      padding-top:8px;
+      border-top:1px solid var(--line);
+      overflow-x:auto;
+      scrollbar-width:none;
+      -webkit-overflow-scrolling:touch;
+    }
+    .nav-links::-webkit-scrollbar{ display:none; }
+    .nav-links a{ white-space:nowrap; color:var(--ink-70); }
+    .nav-cta .btn-pink{ padding:10px 16px; font-size:12.5px; }
+  }
+
+  @media(max-width:420px){
+    .nav-links{ gap:14px; font-size:12px; }
+    .nav-cta .btn-pink{ padding:9px 14px; font-size:12px; }
+    .lang-toggle{ width:34px; height:34px; font-size:10.5px; }
+  }
 
   /* =========================================================
      SECTION 1 — METHOD (dark hero)
@@ -426,7 +434,7 @@
   }
 
   @media(max-width:900px){
-    .method-hero{ padding:140px 0 100px; }
+    .method-hero{ padding:120px 0 90px; }
     .pillars-row{ grid-template-columns:1fr; margin-top:80px; }
     .pillar-item{
       border-inline-start:none;
@@ -1331,7 +1339,7 @@
 <body>
 
 <!-- =========================================================
-     NAVBAR
+     NAVBAR (no hamburger, no mobile panel)
 ========================================================= -->
 <header class="nav">
   <div id="scrollProgress" aria-hidden="true"></div>
@@ -1339,6 +1347,11 @@
     <a href="#method" class="brand">
       <span class="brand-mark en">DR/BAKR<span>SENIOR MATH TUTOR</span></span>
     </a>
+    <div class="nav-cta">
+      <a href="#camp" class="btn btn-outline on-cream" data-i18n="nav.programsShort">البرامج</a>
+      <a id="navWhatsapp" href="#" class="btn btn-pink" data-i18n="nav.cta">ابدأ تحضيرك</a>
+      <button class="lang-toggle en" id="langToggle" type="button">EN</button>
+    </div>
     <nav class="nav-links">
       <a href="#method" data-i18n="nav.method">المنهجية</a>
       <a href="#results" data-i18n="nav.results">النتائج</a>
@@ -1346,23 +1359,6 @@
       <a href="#camp" data-i18n="nav.camp">البرامج</a>
       <a href="#level2" data-i18n="nav.level2">ACT 2 • EST 2</a>
     </nav>
-    <div class="nav-cta">
-      <a href="#camp" class="btn btn-outline on-cream" data-i18n="nav.programsShort">البرامج</a>
-      <a id="navWhatsapp" href="#" class="btn btn-pink" data-i18n="nav.cta">ابدأ تحضيرك</a>
-      <button class="lang-toggle en" id="langToggle" type="button">EN</button>
-      <button class="hamburger" id="hamburger" aria-label="القائمة">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-  <div class="mobile-panel" id="mobilePanel">
-    <a href="#method" data-i18n="nav.method">المنهجية</a>
-    <a href="#results" data-i18n="nav.results">النتائج</a>
-    <a href="#basics" data-i18n="nav.basics">التأسيس</a>
-    <a href="#camp" data-i18n="nav.camp">البرامج</a>
-    <a href="#level2" data-i18n="nav.level2">ACT 2 • EST 2</a>
-    <a id="navWhatsappMobile" href="#" class="btn btn-pink" data-i18n="nav.cta">ابدأ تحضيرك</a>
-    <button class="lang-toggle en mobile-lang" id="langToggleMobile" type="button">EN</button>
   </div>
 </header>
 
@@ -1767,7 +1763,6 @@
      FINAL CTA + FOOTER
 ========================================================= -->
 
-<!-- Final CTA -->
 <section class="final-cta">
   <div class="container">
     <div class="final-cta-inner reveal">
@@ -1792,7 +1787,6 @@
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="site-footer">
   <div class="container">
 
@@ -1870,7 +1864,6 @@
 
           <a href="#" data-wa="general" data-i18n="footer.cols.2.items.0">WhatsApp</a>
 
-          <!-- الرقم — بيفتح الاتصال مباشرة على الموبايل -->
           <a href="#" id="footerPhoneLink" class="footer-phone" dir="ltr">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -1899,9 +1892,8 @@
 ========================================================= -->
 <script>
   /* ---------- WhatsApp + Phone ---------- */
-  /* عدّل الرقم هنا فقط — هيتحدّث تلقائيًا في كل حاجة */
-  const WHATSAPP_NUMBER = "+966572511841";          // الرقم لرابط wa.me (بدون مسافات)
-  const PHONE_NUMBER    = "+966 57 251 1841";        // الرقم المعروض للزائر (بمسافات)
+  const WHATSAPP_NUMBER = "+966572511841";
+  const PHONE_NUMBER    = "+966 57 251 1841";
   const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/ضع-كود-الجروب-هنا";
 
   const WA_MESSAGES = {
@@ -1916,7 +1908,6 @@
   function refreshWaLinks(){
     document.querySelectorAll('[data-wa]').forEach(el=>{ el.href = waLink(el.dataset.wa); });
     const navWa = document.getElementById('navWhatsapp');
-    const navWaM = document.getElementById('navWhatsappMobile');
     const footWa = document.getElementById('footerWhatsapp');
     const waGroupIcon = document.getElementById('footerWhatsappGroup');
     const waGroupLink = document.getElementById('footerWhatsappGroupLink');
@@ -1924,17 +1915,11 @@
     const phoneText = document.getElementById('footerPhoneText');
 
     if (navWa) navWa.href = waLink('general');
-    if (navWaM) navWaM.href = waLink('general');
     if (footWa) footWa.href = waLink('general');
     if (waGroupIcon) waGroupIcon.href = WHATSAPP_GROUP_URL;
     if (waGroupLink) waGroupLink.href = WHATSAPP_GROUP_URL;
-
-    if (phoneLink) {
-      phoneLink.href = 'tel:' + WHATSAPP_NUMBER.replace(/[^+\d]/g, '');
-    }
-    if (phoneText) {
-      phoneText.textContent = PHONE_NUMBER;
-    }
+    if (phoneLink) phoneLink.href = 'tel:' + WHATSAPP_NUMBER.replace(/[^+\d]/g, '');
+    if (phoneText) phoneText.textContent = PHONE_NUMBER;
   }
   refreshWaLinks();
 
@@ -1942,7 +1927,6 @@
   const LANG_STORAGE_KEY = 'drbakr_lang';
   let currentLang = localStorage.getItem(LANG_STORAGE_KEY) || 'ar';
   const langToggle = document.getElementById('langToggle');
-  const langToggleMobile = document.getElementById('langToggleMobile');
 
   function resolvePath(obj, path){
     return path.split('.').reduce((acc, key)=> (acc == null ? acc : acc[key]), obj);
@@ -1964,7 +1948,6 @@
     }
     const nextLabel = lang === 'ar' ? 'EN' : 'AR';
     if (langToggle) langToggle.textContent = nextLabel;
-    if (langToggleMobile) langToggleMobile.textContent = nextLabel;
     currentLang = lang;
     localStorage.setItem(LANG_STORAGE_KEY, lang);
   }
@@ -1983,7 +1966,6 @@
     if (data) applyLang(lang, data);
   }
   if (langToggle) langToggle.addEventListener('click', ()=> loadLang(currentLang === 'ar' ? 'en' : 'ar'));
-  if (langToggleMobile) langToggleMobile.addEventListener('click', ()=> loadLang(currentLang === 'ar' ? 'en' : 'ar'));
   loadLang(currentLang);
 
   /* ---------- GALLERY ---------- */
@@ -2080,17 +2062,6 @@
   });
   document.addEventListener('dragstart', e=>{
     if(e.target.closest('.protected-img')) e.preventDefault();
-  });
-
-  /* ---------- Mobile nav ---------- */
-  const hamburger = document.getElementById('hamburger');
-  const mobilePanel = document.getElementById('mobilePanel');
-  hamburger.addEventListener('click', ()=>{
-    hamburger.classList.toggle('open');
-    mobilePanel.classList.toggle('open');
-  });
-  mobilePanel.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click', ()=>{ hamburger.classList.remove('open'); mobilePanel.classList.remove('open'); });
   });
 
   /* ---------- Method toggle ---------- */
