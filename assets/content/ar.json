@@ -173,8 +173,19 @@
       "cta": "احجز EST 2"
     }
   },
+  "finalCta": {
+    "heading_html": "جاهز تبدأ <b>التحضير</b>؟",
+    "sub": "ابدأ دلوقتي، وخلّي أول Trial يكون أقوى Trial.",
+    "cta": "ابدأ تحضيرك",
+    "ctaSecondary": "شوف البرامج"
+  },
   "footer": {
-    "tagline": "تحضير احترافي لاختبارات SAT وEST وACT Math، مبني على الفهم والمتابعة الحقيقية."
+    "tagline": "تحضير احترافي لاختبارات SAT وEST وACT Math، مبني على الفهم والمتابعة الحقيقية.",
+    "cols": [
+      { "title": "Navigate" },
+      { "title": "Programs", "items": ["Basics Course", "SAT Math", "EST Math", "Revision Camp", "ACT 2 / EST 2"] },
+      { "title": "Contact", "items": ["WhatsApp", "جروب الدبلومة الأمريكية", "SAT · EST · ACT"] }
+    ]
   },
   "whatsapp": {
     "basics": "أهلاً دكتور بكر، محتاج تفاصيل الاشتراك في كورس الـ Basics",
