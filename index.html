@@ -944,38 +944,226 @@
   }
 
   /* =========================================================
-     FOOTER
+     FINAL CTA + SITE FOOTER
   ========================================================= */
-  footer{ background:var(--black); color:rgba(255,247,236,.6); padding:80px 0 32px; }
+
+  .final-cta{
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 0%, rgba(237,35,95,.14), transparent 65%),
+      var(--black);
+    color: var(--cream);
+    padding: 120px 0;
+    border-top: 1px solid rgba(255,247,236,.06);
+  }
+  .final-cta-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  .final-cta-text{ max-width: 620px; }
+  .final-cta-text .eyebrow{ color: var(--pink); margin-bottom: 20px; }
+  .final-cta-text .h2{ color: var(--cream); }
+  .final-cta-text .h2 b{ color: var(--pink); }
+  .final-cta-sub{
+    margin-top: 18px;
+    font-size: clamp(16px, 1.3vw, 18px);
+    color: rgba(255,247,236,.7);
+    line-height: 1.6;
+    max-width: 480px;
+  }
+  .final-cta-actions{
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+  .final-cta-actions .btn-outline{
+    border-color: rgba(255,247,236,.35);
+    color: var(--cream);
+  }
+  .final-cta-actions .btn-outline:hover{
+    background: var(--cream);
+    color: var(--black);
+    border-color: var(--cream);
+  }
+  @media (max-width: 900px){
+    .final-cta{ padding: 90px 0; }
+    .final-cta-inner{ gap: 36px; }
+    .final-cta-actions{ width: 100%; }
+    .final-cta-actions .btn{ flex: 1 1 auto; }
+  }
+
+  /* Footer */
+  .site-footer{
+    background: var(--black);
+    color: rgba(255,247,236,.6);
+    padding: 90px 0 36px;
+    border-top: 1px solid rgba(255,247,236,.06);
+    position: relative;
+    overflow: hidden;
+  }
+  .site-footer::before{
+    content:"";
+    position:absolute;
+    top:0; inset-inline:0; height:1px;
+    background: linear-gradient(90deg, transparent, rgba(237,35,95,.4), transparent);
+  }
+
   .footer-top{
-    display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap;
-    padding-bottom:56px;
-    border-bottom:1px solid rgba(255,247,236,.1);
+    display: grid;
+    grid-template-columns: 1.1fr 1.6fr;
+    gap: 80px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid rgba(255,247,236,.08);
   }
-  .footer-brand .brand-mark{ color:var(--cream); }
-  .footer-brand p{ margin-top:18px; font-size:14px; max-width:300px; line-height:1.6; }
-  .footer-cols{ display:flex; gap:72px; flex-wrap:wrap; }
+
+  .footer-brand .brand-mark{ color: var(--cream); font-size: 22px; }
+  .footer-brand .brand-mark span{ font-size: 9px; margin-top: 6px; }
+  .footer-brand p{
+    margin-top: 22px;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 340px;
+    color: rgba(255,247,236,.6);
+  }
+
+  .footer-social{
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .footer-social-link{
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,247,236,.14);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,247,236,.7);
+    transition: background .35s var(--ease), color .35s var(--ease),
+                border-color .35s var(--ease), transform .35s var(--ease);
+  }
+  .footer-social-link:hover{
+    background: rgba(255,247,236,.06);
+    border-color: rgba(255,247,236,.3);
+    color: var(--cream);
+    transform: translateY(-3px);
+  }
+  .footer-social-link--wa:hover{
+    background: #25D366;
+    border-color: #25D366;
+    color: #fff;
+  }
+  .footer-social-link--fb:hover{
+    background: #1877F2;
+    border-color: #1877F2;
+    color: #fff;
+  }
+  .footer-social-link--wa-group:hover{
+    background: #25D366;
+    border-color: #25D366;
+    color: #fff;
+  }
+  .footer-social-link svg{ width: 18px; height: 18px; }
+
+  .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
   .footer-col h5{
-    font-size:11px; letter-spacing:.18em; color:var(--pink);
-    margin-bottom:20px; font-weight:800; text-transform:uppercase;
-    font-family:var(--font-en);
+    font-family: var(--font-en);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 22px;
   }
-  .footer-col a, .footer-col span{ display:block; font-size:14px; padding:6px 0; color:rgba(255,247,236,.6); }
-  .footer-col a:hover{ color:var(--cream); }
+  .footer-col a,
+  .footer-col span{
+    display: block;
+    font-size: 14.5px;
+    padding: 7px 0;
+    color: rgba(255,247,236,.6);
+    transition: color .25s var(--ease), padding-inline-start .3s var(--ease);
+  }
+  .footer-col a:hover{
+    color: var(--cream);
+    padding-inline-start: 4px;
+  }
+
+  /* Footer phone */
+  .footer-phone{
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-en);
+    font-weight: 600;
+    letter-spacing: .02em;
+    font-size: 14.5px !important;
+    direction: ltr;
+    color: rgba(255,247,236,.7) !important;
+    transition: color .25s var(--ease), padding-inline-start .3s var(--ease) !important;
+  }
+  .footer-phone svg{
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    opacity: .65;
+    transition: opacity .25s var(--ease), color .25s var(--ease);
+  }
+  .footer-phone:hover{
+    color: var(--cream) !important;
+    padding-inline-start: 4px;
+  }
+  .footer-phone:hover svg{
+    opacity: 1;
+    color: var(--pink);
+  }
+
   .footer-bottom{
-    display:flex; justify-content:space-between; padding-top:28px;
-    font-size:12.5px; flex-wrap:wrap; gap:10px;
-    color:rgba(255,247,236,.4);
-    font-family:var(--font-en);
-    letter-spacing:.02em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    font-size: 12.5px;
+    letter-spacing: .03em;
+    color: rgba(255,247,236,.4);
+    font-family: var(--font-en);
   }
-  @media(max-width:700px){ .footer-top{ flex-direction:column; gap:36px; } .footer-cols{ gap:48px; } }
+  .footer-copy{ order: 1; }
+  .footer-made{ order: 2; }
+
+  @media(max-width: 900px){
+    .site-footer{ padding: 70px 0 30px; }
+    .footer-top{
+      grid-template-columns: 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+    }
+    .footer-cols{ grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .footer-brand p{ max-width: none; }
+  }
+  @media(max-width: 560px){
+    .footer-cols{ grid-template-columns: 1fr; gap: 28px; }
+    .footer-bottom{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .footer-copy, .footer-made{ order: initial; }
+  }
 
   /* =========================================================
-     READING FLOW — animations layer
+     READING FLOW — animations
   ========================================================= */
-
-  /* Hero entrance */
   .hero-enter{
     opacity:0;
     transform: translateY(30px) scale(.985);
@@ -993,7 +1181,6 @@
     filter: blur(0);
   }
 
-  /* Pillars staggered */
   .pillar-item{
     opacity:0;
     transform: translateY(42px);
@@ -1009,7 +1196,6 @@
     transform: translateY(0);
   }
 
-  /* Reveal */
   .reveal, .reveal-left, .reveal-right{
     opacity:0;
     transform: translateY(38px) scale(.985);
@@ -1031,7 +1217,6 @@
     filter: blur(0);
   }
 
-  /* Stagger groups */
   .stagger > *{
     opacity:0;
     transform: translateY(30px) scale(.98);
@@ -1048,7 +1233,6 @@
     filter: blur(0);
   }
 
-  /* Magnetic buttons */
   .btn-magnetic{
     transition: transform .35s cubic-bezier(.16,1,.3,1),
                 background .35s var(--ease),
@@ -1058,7 +1242,6 @@
     will-change: transform;
   }
 
-  /* Section indicator */
   .section-indicator{
     position: fixed;
     inset-inline-end: 22px;
@@ -1124,7 +1307,6 @@
     .section-indicator{ display: none; }
   }
 
-  /* Reduced motion */
   @media (prefers-reduced-motion: reduce){
     .reveal, .reveal-left, .reveal-right,
     .stagger > *,
@@ -1582,35 +1764,133 @@
 </section>
 
 <!-- =========================================================
-     FOOTER
+     FINAL CTA + FOOTER
 ========================================================= -->
-<footer>
+
+<!-- Final CTA -->
+<section class="final-cta">
   <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand reveal">
-        <span class="brand-mark en">DR/BAKR<span>SENIOR MATH TUTOR</span></span>
-        <p data-i18n="footer.tagline">تحضير احترافي لاختبارات SAT وEST وACT Math، مبني على الفهم والمتابعة الحقيقية.</p>
+    <div class="final-cta-inner reveal">
+      <div class="final-cta-text">
+        <div class="eyebrow en">READY?</div>
+        <h2 class="h2" data-i18n-html="finalCta.heading_html">
+          جاهز تبدأ <b>التحضير</b>؟
+        </h2>
+        <p class="final-cta-sub" data-i18n="finalCta.sub">
+          ابدأ دلوقتي، وخلّي أول Trial يكون أقوى Trial.
+        </p>
       </div>
+      <div class="final-cta-actions">
+        <a href="#" class="btn btn-pink btn-lg btn-magnetic" data-wa="general" data-i18n="finalCta.cta">
+          ابدأ تحضيرك
+        </a>
+        <a href="#camp" class="btn btn-outline on-black btn-lg btn-magnetic" data-i18n="finalCta.ctaSecondary">
+          شوف البرامج
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-top">
+
+      <div class="footer-brand reveal">
+        <a href="#method" class="brand">
+          <span class="brand-mark en">DR/BAKR<span>SENIOR MATH TUTOR</span></span>
+        </a>
+        <p data-i18n="footer.tagline">
+          تحضير احترافي لاختبارات SAT وEST وACT Math، مبني على الفهم والمتابعة الحقيقية.
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram" class="footer-social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="footer-social-link footer-social-link--fb">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06C2 17.08 5.66 21.24 10.44 22v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22C18.34 21.24 22 17.08 22 12.06z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="footer-social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16.5 3a4.5 4.5 0 0 0 4.5 4.5V10a7.5 7.5 0 0 1-4.5-1.5V15a6 6 0 1 1-6-6c.34 0 .67.03 1 .08V11.6a2.5 2.5 0 1 0 2 2.45V3h3z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="footer-social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="5" width="20" height="14" rx="4"/>
+              <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="#" id="footerWhatsapp" aria-label="WhatsApp" class="footer-social-link footer-social-link--wa">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.45 3.43 1.32 4.93L2 22l5.35-1.4c1.44.78 3.06 1.2 4.7 1.2 5.44 0 9.84-4.4 9.84-9.84S17.48 2 12.04 2zm5.7 13.94c-.24.68-1.4 1.3-1.93 1.36-.5.06-1.12.08-1.8-.12-.42-.12-.96-.32-1.66-.62-2.92-1.26-4.82-4.2-4.96-4.4-.14-.2-1.18-1.56-1.18-2.98s.74-2.12 1-2.42c.26-.3.58-.38.78-.38.2 0 .4 0 .56.01.18.01.42-.07.66.5.24.58.82 2.02.9 2.16.08.14.13.3.02.5-.1.2-.2.32-.36.5-.16.18-.34.4-.48.54-.16.16-.32.32-.14.62.18.3.8 1.32 1.72 2.14 1.18 1.06 2.18 1.38 2.48 1.54.3.16.48.14.66-.08.18-.22.78-.9.98-1.22.2-.32.4-.26.66-.16.26.1 1.68.8 1.96.94.28.14.48.22.54.34.06.12.06.7-.18 1.38z"/>
+            </svg>
+          </a>
+          <a href="#" id="footerWhatsappGroup" aria-label="WhatsApp Group — American Diploma" class="footer-social-link footer-social-link--wa-group">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
       <div class="footer-cols reveal">
+
         <div class="footer-col">
-          <h5>Navigate</h5>
+          <h5 class="en" data-i18n="footer.cols.0.title">Navigate</h5>
           <a href="#method" data-i18n="nav.method">المنهجية</a>
           <a href="#results" data-i18n="nav.results">النتائج</a>
           <a href="#basics" data-i18n="nav.basics">التأسيس</a>
           <a href="#camp" data-i18n="nav.camp">البرامج</a>
           <a href="#level2" data-i18n="nav.level2">ACT 2 • EST 2</a>
         </div>
+
         <div class="footer-col">
-          <h5>Contact</h5>
-          <a href="#" id="footerWhatsapp" class="en">WhatsApp</a>
-          <span class="en">SAT · EST · ACT</span>
+          <h5 class="en" data-i18n="footer.cols.1.title">Programs</h5>
+          <a href="#basics" data-i18n="footer.cols.1.items.0">Basics Course</a>
+          <a href="#camp" data-i18n="footer.cols.1.items.1">SAT Math</a>
+          <a href="#camp" data-i18n="footer.cols.1.items.2">EST Math</a>
+          <a href="#camp" data-i18n="footer.cols.1.items.3">Revision Camp</a>
+          <a href="#level2" data-i18n="footer.cols.1.items.4">ACT 2 / EST 2</a>
         </div>
+
+        <div class="footer-col">
+          <h5 class="en" data-i18n="footer.cols.2.title">Contact</h5>
+
+          <a href="#" data-wa="general" data-i18n="footer.cols.2.items.0">WhatsApp</a>
+
+          <!-- الرقم — بيفتح الاتصال مباشرة على الموبايل -->
+          <a href="#" id="footerPhoneLink" class="footer-phone" dir="ltr">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span id="footerPhoneText">+966 57 251 1841</span>
+          </a>
+
+          <a href="#" id="footerWhatsappGroupLink" target="_blank" rel="noopener" data-i18n="footer.cols.2.items.1">جروب الدبلومة الأمريكية</a>
+
+          <span class="en">Sat · Est · Act</span>
+        </div>
+
       </div>
     </div>
+
     <div class="footer-bottom">
-      <span>© 2026 DR/BAKR — SENIOR MATH TUTOR</span>
-      <span>SAT · EST · ACT MATHEMATICS</span>
+      <span class="footer-copy en">© 2026 DR/BAKR — Senior Math Tutor</span>
+      <span class="footer-made en">SAT · EST · ACT MATHEMATICS</span>
     </div>
+
   </div>
 </footer>
 
@@ -1618,8 +1898,12 @@
      SCRIPTS
 ========================================================= -->
 <script>
-  /* ---------- WhatsApp ---------- */
-  const WHATSAPP_NUMBER = "+966572511841";
+  /* ---------- WhatsApp + Phone ---------- */
+  /* عدّل الرقم هنا فقط — هيتحدّث تلقائيًا في كل حاجة */
+  const WHATSAPP_NUMBER = "+966572511841";          // الرقم لرابط wa.me (بدون مسافات)
+  const PHONE_NUMBER    = "+966 57 251 1841";        // الرقم المعروض للزائر (بمسافات)
+  const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/ضع-كود-الجروب-هنا";
+
   const WA_MESSAGES = {
     sat: "أهلاً دكتور بكر، محتاج تفاصيل الاشتراك في كورس الـ SAT",
     est: "أهلاً دكتور بكر، محتاج تفاصيل الاشتراك في كورس الـ EST",
@@ -1634,9 +1918,23 @@
     const navWa = document.getElementById('navWhatsapp');
     const navWaM = document.getElementById('navWhatsappMobile');
     const footWa = document.getElementById('footerWhatsapp');
+    const waGroupIcon = document.getElementById('footerWhatsappGroup');
+    const waGroupLink = document.getElementById('footerWhatsappGroupLink');
+    const phoneLink = document.getElementById('footerPhoneLink');
+    const phoneText = document.getElementById('footerPhoneText');
+
     if (navWa) navWa.href = waLink('general');
     if (navWaM) navWaM.href = waLink('general');
     if (footWa) footWa.href = waLink('general');
+    if (waGroupIcon) waGroupIcon.href = WHATSAPP_GROUP_URL;
+    if (waGroupLink) waGroupLink.href = WHATSAPP_GROUP_URL;
+
+    if (phoneLink) {
+      phoneLink.href = 'tel:' + WHATSAPP_NUMBER.replace(/[^+\d]/g, '');
+    }
+    if (phoneText) {
+      phoneText.textContent = PHONE_NUMBER;
+    }
   }
   refreshWaLinks();
 
@@ -1825,7 +2123,6 @@
   ========================================================= */
   const PREFERS_REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* 1) Hero entrance */
   window.addEventListener('load', ()=>{
     requestAnimationFrame(()=>{
       document.querySelectorAll('.hero-enter').forEach(el=> el.classList.add('in'));
@@ -1833,7 +2130,6 @@
     });
   });
 
-  /* 2) Reveal on scroll */
   const revealObserver = new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
       if (entry.isIntersecting){
@@ -1846,7 +2142,6 @@
     revealObserver.observe(el);
   });
 
-  /* 3) Stagger groups */
   const staggerObserver = new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
       if (entry.isIntersecting){
@@ -1861,7 +2156,6 @@
   }, { threshold: .12, rootMargin: '0px 0px -60px 0px' });
   document.querySelectorAll('.stagger').forEach(el=> staggerObserver.observe(el));
 
-  /* 4) Section indicator */
   const sections = ['method','results','basics','camp','level2'];
   const indicator = document.getElementById('sectionIndicator');
   const indicatorLinks = indicator ? Array.from(indicator.querySelectorAll('a')) : [];
@@ -1880,7 +2174,6 @@
     }
   }
 
-  /* 5) Nav shadow + scroll progress */
   const navEl = document.querySelector('header.nav');
   const scrollProgressEl = document.getElementById('scrollProgress');
 
@@ -1898,7 +2191,6 @@
   window.addEventListener('scroll', onScroll, { passive:true });
   window.addEventListener('resize', onScroll);
 
-  /* 6) Parallax on hero mesh */
   const heroEl = document.querySelector('.method-hero');
   if (heroEl && !PREFERS_REDUCED){
     let raf = null;
@@ -1912,7 +2204,6 @@
     }, { passive: true });
   }
 
-  /* 7) Magnetic buttons */
   if (!PREFERS_REDUCED){
     document.querySelectorAll('.btn-magnetic').forEach(btn=>{
       const strength = 6;
@@ -1928,7 +2219,6 @@
     });
   }
 
-  /* 8) Program card cursor glow */
   document.querySelectorAll('.program-card').forEach(card=>{
     card.addEventListener('mousemove', e=>{
       const r = card.getBoundingClientRect();
@@ -2065,8 +2355,19 @@
       "cta": "احجز EST 2"
     }
   },
+  "finalCta": {
+    "heading_html": "جاهز تبدأ <b>التحضير</b>؟",
+    "sub": "ابدأ دلوقتي، وخلّي أول Trial يكون أقوى Trial.",
+    "cta": "ابدأ تحضيرك",
+    "ctaSecondary": "شوف البرامج"
+  },
   "footer": {
-    "tagline": "تحضير احترافي لاختبارات SAT وEST وACT Math، مبني على الفهم والمتابعة الحقيقية."
+    "tagline": "تحضير احترافي لاختبارات SAT وEST وACT Math، مبني على الفهم والمتابعة الحقيقية.",
+    "cols": [
+      { "title": "Navigate" },
+      { "title": "Programs", "items": ["Basics Course", "SAT Math", "EST Math", "Revision Camp", "ACT 2 / EST 2"] },
+      { "title": "Contact", "items": ["WhatsApp", "جروب الدبلومة الأمريكية", "SAT · EST · ACT"] }
+    ]
   },
   "whatsapp": {
     "basics": "أهلاً دكتور بكر، محتاج تفاصيل الاشتراك في كورس الـ Basics",
@@ -2198,8 +2499,19 @@
       "cta": "Book EST 2"
     }
   },
+  "finalCta": {
+    "heading_html": "Ready to start your <b>preparation</b>?",
+    "sub": "Start now — and make your first Trial your strongest.",
+    "cta": "Start Your Preparation",
+    "ctaSecondary": "See Programs"
+  },
   "footer": {
-    "tagline": "Professional preparation for SAT, EST and ACT Math, built on real understanding and follow-up."
+    "tagline": "Professional preparation for SAT, EST and ACT Math, built on real understanding and follow-up.",
+    "cols": [
+      { "title": "Navigate" },
+      { "title": "Programs", "items": ["Basics Course", "SAT Math", "EST Math", "Revision Camp", "ACT 2 / EST 2"] },
+      { "title": "Contact", "items": ["WhatsApp", "American Diploma WhatsApp Group", "SAT · EST · ACT"] }
+    ]
   },
   "whatsapp": {
     "basics": "Hi Dr. Bakr, I'd like details on subscribing to the Basics Course",
