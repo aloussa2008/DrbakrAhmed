@@ -173,8 +173,19 @@
       "cta": "Book EST 2"
     }
   },
+  "finalCta": {
+    "heading_html": "Ready to start your <b>preparation</b>?",
+    "sub": "Start now — and make your first Trial your strongest.",
+    "cta": "Start Your Preparation",
+    "ctaSecondary": "See Programs"
+  },
   "footer": {
-    "tagline": "Professional preparation for SAT, EST and ACT Math, built on real understanding and follow-up."
+    "tagline": "Professional preparation for SAT, EST and ACT Math, built on real understanding and follow-up.",
+    "cols": [
+      { "title": "Navigate" },
+      { "title": "Programs", "items": ["Basics Course", "SAT Math", "EST Math", "Revision Camp", "ACT 2 / EST 2"] },
+      { "title": "Contact", "items": ["WhatsApp", "American Diploma WhatsApp Group", "SAT · EST · ACT"] }
+    ]
   },
   "whatsapp": {
     "basics": "Hi Dr. Bakr, I'd like details on subscribing to the Basics Course",
